@@ -42,7 +42,7 @@ public class MusicManager extends JFrame {
         setLayout(new FlowLayout());
         
         // Creating the GUI parts
-        clickButton = new JButton("Like️");
+        clickButton = new JButton("❤️");
         messageLabel = new JLabel();
         mainPanel = new JPanel();
         cardLayout = new CardLayout();
@@ -50,7 +50,7 @@ public class MusicManager extends JFrame {
 
         panel1 = createPanel("<html><h1>𝙈𝙪𝙨𝙞𝙘𝙈𝙖𝙣𝙖𝙜𝙚𝙧 - Songs For You</h1></html>", Color.WHITE);
         panel1SongCount = (JLabel)panel1.getComponent(2); 
-        panel2 = createPanel("<html><h1>𝙈𝙪𝙨𝙞𝙘𝙈𝙖𝙣𝙖𝙜𝙚𝙧 - Liked Songs</h1></html>", Color.WHITE);
+        panel2 = createPanel("<html><h1>𝙈𝙪𝙨𝙞𝙘𝙈𝙖𝙣𝙖𝙜𝙚𝙧 - Liked Songs (click like to unlike)</h1></html>", Color.WHITE);
         panel2SongCount = (JLabel)panel2.getComponent(2);
         
         panel2.setLayout(new BoxLayout(panel2, BoxLayout.Y_AXIS));
@@ -107,13 +107,13 @@ public class MusicManager extends JFrame {
         // Re-arrange the button panel here
         buttonPanel.add(clickButton); 
         buttonPanel.add(Box.createRigidArea(new Dimension(0, 30)));
-        buttonPanel.add(button2);
-        buttonPanel.add(button1);
         
+        buttonPanel.add(button2);
+        buttonPanel.add(button1);    
         buttonPanel.add(Genre1ToHome);
         buttonPanel.add(Genre2ToHome);
         
-        button1.setPreferredSize(new Dimension(500, 500));
+        
         
         Genre1ToHome.addActionListener(e -> {
             Genre1ToHome();
@@ -124,7 +124,7 @@ public class MusicManager extends JFrame {
     });        
         
         // Unlike button
-        unlikeButton = new JButton("Unlike");
+        unlikeButton = new JButton("❤️");
         unlikeButton.setVisible(false); 
         unlikeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -195,14 +195,14 @@ public class MusicManager extends JFrame {
         buttonPanel.add(genreButton2);
         
         // Panel 3
-        panel3 = createPanel("<html><h1>Genre 1</h1></html>", Color.WHITE);
+        panel3 = createPanel("<html><h1>𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝟭</h1></html>", Color.WHITE);
         panel3SongCount = (JLabel)panel3.getComponent(2);
         mainPanel.add(panel3, "panel3");
         panel3.setPreferredSize(new Dimension(700, 900));
         panel3.setVisible(false); 
         
         // Panel 4
-        panel4 = createPanel("<html><h1>Genre 2</h1></html>", Color.WHITE);
+        panel4 = createPanel("<html><h1>𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝟮</h1></html>", Color.WHITE);
         panel4SongCount = (JLabel)panel4.getComponent(2);
         mainPanel.add(panel4, "panel4");
         panel4.setPreferredSize(new Dimension(700, 900));
